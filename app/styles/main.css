@@ -343,17 +343,30 @@ hr {
 .icoLinked {
   width: 39px;
   height: 39px;
+  display: inline-block;
 }
 .icoFB {
   background: url('../images/FB-icon.png') no-repeat;
 }
+.icoFB:hover {
+  background: url('../images/FB-icon-hover.png') no-repeat;
+}
 .icoTwitter {
+  background: url('../images/Twiter-Icon.png') no-repeat;
+}
+.icoTwitter:hover {
   background: url('../images/Twiter-Icon.png') no-repeat;
 }
 .icoGP {
   background: url('../images/gplus-icon.png') no-repeat;
 }
+.icoGP:hover {
+  background: url('../images/gplus-icon-hover.png') no-repeat;
+}
 .icoLinked {
   background: url('../images/LinkedIn-Icon.png') no-repeat;
+}
+.icoLinked:hover {
+  background: url('../images/LinkedIn-Icon-hover.png') no-repeat;
 }
 /*# sourceMappingURL=/styles/main.css.map */
