@@ -233,6 +233,13 @@ hr {
 .header {
   padding-top: 25px;
 }
+.banner {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  background: #1a1e21;
+}
 .logo {
   background: url('../images/28-logo-lifelab.png') no-repeat;
   display: inline-block;
@@ -303,8 +310,18 @@ hr {
   width: 131px;
   height: 40px;
 }
+.social-list {
+  position: fixed;
+  top: 50%;
+  margin-top: -110px;
+  right: 10px;
+}
+.social-list li {
+  padding-bottom: 15px;
+}
 .intro {
   line-height: 71px;
+  margin-top: 110px;
   color: #666666;
 }
 .intro .singtel-logo {
@@ -318,5 +335,25 @@ hr {
   width: 104px;
   height: 34px;
   display: inline-block;
+}
+.ico,
+.icoFB,
+.icoTwitter,
+.icoGP,
+.icoLinked {
+  width: 39px;
+  height: 39px;
+}
+.icoFB {
+  background: url('../images/FB-icon.png') no-repeat;
+}
+.icoTwitter {
+  background: url('../images/Twiter-Icon.png') no-repeat;
+}
+.icoGP {
+  background: url('../images/gplus-icon.png') no-repeat;
+}
+.icoLinked {
+  background: url('../images/LinkedIn-Icon.png') no-repeat;
 }
 /*# sourceMappingURL=/styles/main.css.map */
