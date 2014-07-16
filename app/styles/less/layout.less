@@ -1,0 +1,129 @@
+body{
+	font-size: 16px;
+	font-family: 'Open Sans' , sans-serif;
+	background: @black;
+}
+
+ul,li,ol{
+	padding:0px;
+}
+
+hr{
+	width:100%;
+}
+
+.container {
+	width:940px;
+	margin: auto;
+}
+
+// HEADER 
+.header{
+	padding-top: 25px;
+}
+
+.logo{
+	background: url('../images/28-logo-lifelab.png') no-repeat;
+	display: inline-block;
+	width:170px;
+	height:50px;
+	padding-bottom: 5px;
+}
+
+// NAVIGATION 
+
+.nav-theme(@color){
+	&:hover{
+		color:@color;
+		border-bottom: 5px solid @color;
+	}
+}
+.nav-bar{
+	margin-left: 38px;
+	display: inline-block;
+	height: 45px;
+	a{
+		margin-right: 30px;
+		padding-bottom: 20px;
+		color:@li-gray;
+		text-decoration: none;
+	}
+
+	.purple{
+		.nav-theme(@purple);
+	}
+
+	.green{
+		.nav-theme(@green);
+	}
+
+	.red{
+		.nav-theme(@red);
+	}
+
+	.blue{
+		.nav-theme(@blue);
+	}
+
+	.grey{
+		.nav-theme(@grey);
+	}
+}
+
+
+// FOOTER
+.footer{
+	color:@white;
+	p{
+		font-size: 0.6875em;
+		margin:6px;
+		width:150px;
+	}
+}
+
+.contact{
+	margin-top: 45px;
+	height: 330px;
+	border-bottom: 4px double @line-gray;
+	h6{
+		margin-top: 0px;
+	}
+	
+}
+
+.flag{
+	width:160px;
+	line-height: 116px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: @dark-black;
+	.singtel-logo{
+		vertical-align: middle;
+	}
+}
+
+.footer-logo{
+	background: url('../images/28-footer_logo.png') no-repeat;
+	display: inline-block;
+	width:131px;
+	height:40px;
+}
+// INTRO
+.intro{
+	line-height: 71px;
+	 color:@blur-gray;
+	.singtel-logo{
+		vertical-align: middle;
+		margin-left: 50px;
+		padding-right: 19px;
+		margin-top: -14px;
+	}
+}
+
+.singtel-logo{
+	background: url('../images/logo-singtel.png') no-repeat;
+	width:104px;
+	height:34px;
+	display: inline-block;
+}
+
