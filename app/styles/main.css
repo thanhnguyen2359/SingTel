@@ -336,6 +336,22 @@ hr {
   height: 34px;
   display: inline-block;
 }
+.page {
+  text-align: center;
+  color: #333333;
+  background: #e8e8e8;
+}
+.page h1 {
+  display: inline-block;
+  margin: 53px;
+  color: #805e9c;
+  font-size: 2.8125em;
+}
+.page p {
+  font-size: 1.125em;
+  margin: 0px;
+  padding: 1em;
+}
 .ico,
 .icoFB,
 .icoTwitter,
