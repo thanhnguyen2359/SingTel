@@ -12,6 +12,7 @@ hr{
 	width:100%;
 }
 
+
 .container {
 	width:940px;
 	margin: auto;
@@ -20,6 +21,14 @@ hr{
 // HEADER 
 .header{
 	padding-top: 25px;
+}
+
+.banner{
+	width: 100%;
+	position: fixed;
+	top:0px;
+	z-index: 1000;
+	background:@black;
 }
 
 .logo{
@@ -108,9 +117,20 @@ hr{
 	width:131px;
 	height:40px;
 }
+
+.social-list{
+	position: fixed;
+	top:50%;
+	margin-top: -(160 + 60)/2px;
+	right:10px;
+	li{
+		padding-bottom: 15px;
+	}
+}
 // INTRO
 .intro{
 	line-height: 71px;
+	margin-top: 110px;
 	 color:@blur-gray;
 	.singtel-logo{
 		vertical-align: middle;
