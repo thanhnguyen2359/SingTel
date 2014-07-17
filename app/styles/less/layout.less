@@ -150,9 +150,7 @@ hr{
 .partner-list{
 	margin-bottom: 30px;
 	border-bottom:1px solid @li-gray;
-	.span2:hover{
-		background: @white;
-	}
+
 	img{
 		margin: auto;
 		display: block;
@@ -166,6 +164,20 @@ hr{
 
 	p{
 		width:95%;
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+.li-hover{
+	&:hover{
+		background: @white;
+	}
+}
+
+.dk-hover{
+	&:hover{
+		background: @hover-black;
 	}
 }
 
@@ -175,7 +187,8 @@ hr{
 	p{
 		font-size: 1.125em;
 		margin: 0px;
-		padding: 0.125em;
+		padding-bottom: 0.125em;
+		padding-top: 0.125em;
 	}
 
 	h1{
@@ -206,7 +219,21 @@ hr{
 	h1{
 		&:extend(.page h1);
 		&:extend(.bg-li-purple);
-		color:@purple;
+	}
+}
+
+.dk-page{
+	&:extend(.page);
+	color:@text-black;
+
+	p{
+		&:extend(.page p);
+	}
+
+	h1{
+		&:extend(.page h1);
+		&:extend(.bg-black);
+		color:@green;
 	}
 }
 
@@ -235,6 +262,9 @@ hr{
 	width:100%;
 	margin-top: -410px;
 	background: url('../images/welcome-face.png') no-repeat 0% -70px;
+	&:after{
+		&:extend(.jagbottom-line);
+	}
 }
 
 .face21{
@@ -242,15 +272,90 @@ hr{
 	width:100%;
 	margin-top: -410px;
 	background: url('../images/face21.png') no-repeat 140% -232px; 
+
+	&:before{
+		&:extend(.jagtop-line);
+	}
+
+	&:after{
+		background: url('../images/grey-top-jag1.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -5px;
+		display: block;
+		content: "";
+	}
+}
+
+.face31{
+	height: 410px;
+	width:100%;
+	margin-top: -410px;
+	background: url('../images/face31.png') no-repeat 0% -80px; 
+
+	&:before{
+		background: url('../images/grey-bottom-jag1.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -5px;
+		display: block;
+		content: "";
+	}
+
+	&:after{
+		background: url('../images/mgrey-jag-top.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -10px;
+		display: block;
+		content: "";
+	}
+}
+
+.face41{
+	height: 410px;
+	width:100%;
+	margin-top: -410px;
+	background: url('../images/face41.png') no-repeat 140% -143px; 
+
+	&:before{
+		&:extend(.jagtop-line);
+	}
+
+	&:after{
+		background: url('../images/grey-top-jag1.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -5px;
+		display: block;
+		content: "";
+	}
+}
+
+.jagbottom-line{
+	background: url('../images/mgrey-jag-top.png') repeat-x;
+	width:100%;
+	height: 5px;
+	margin-top: -5px;
+	display: block;
+	content: "";
 }
 
 .jagtop-line{
-	background: url('../images/mgrey-jag-top.png');
-	height: 5px;
-	margin-top: -5px;
+	background: url('../images/mgrey-jag-bot.png') repeat-x;
 	width:100%;
+	height: 5px;
+	margin-bottom: -5px;
+	display: block;
+	content: "";
 }
 
+.foundary{
+	background: url('../images/1-1317-foundary-1-homepage.png') no-repeat;
+	width:800px;
+	height: 500px;
+	margin: auto;
+}
 
 
 /*BUTTONS*/
@@ -262,4 +367,10 @@ hr{
 	padding: 10px 20px;
 	text-decoration: none;
 	display: inline-block;
+	
+	margin-top: 30px;
+	margin-bottom: 30px;
+	&:hover{
+		background: @dark-black;
+	}
 }
