@@ -392,7 +392,7 @@ hr {
     display: block;
     width: 100%;
     padding-left: 20px;
-    line-height: 2em;
+    line-height: 3em;
     padding-bottom: 0px;
   }
 }
@@ -473,7 +473,7 @@ hr {
 }
 @media all and (max-width: 768px) {
   .intro {
-    margin-top: 220px;
+    margin-top: 290px;
   }
 }
 .singtel-logo {
