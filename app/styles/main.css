@@ -174,6 +174,11 @@ table {
 .bg-gray {
   background: #333333;
 }
+.bg-li-purple,
+.li-page,
+.li-page h1 {
+  background: #e8e8e8;
+}
 .blue {
   color: #55b6ce;
 }
@@ -188,6 +193,9 @@ table {
 }
 .pull-right {
   float: right;
+}
+.cleared {
+  clear: both;
 }
 .unstyled {
   list-style: none;
@@ -207,11 +215,31 @@ table {
 .span3:after {
   clear: both;
 }
+.span2 {
+  width: 50%;
+  float: left;
+}
+.span2:before,
+.span2:after {
+  content: " ";
+  display: table;
+}
+.span2:after {
+  clear: both;
+}
 .bold {
   font-weight: bold;
 }
 .double-border {
   border-style: double;
+}
+/*WRAPPER*/
+.relative-wrap {
+  position: relative;
+}
+.full-parent {
+  width: 100%;
+  height: 100%;
 }
 body {
   font-size: 16px;
@@ -230,6 +258,7 @@ hr {
   width: 940px;
   margin: auto;
 }
+/* HEADER */
 .header {
   padding-top: 25px;
 }
@@ -247,6 +276,7 @@ hr {
   height: 50px;
   padding-bottom: 5px;
 }
+/*NAVIGATION */
 .nav-bar {
   margin-left: 38px;
   display: inline-block;
@@ -278,6 +308,7 @@ hr {
   color: #616161;
   border-bottom: 5px solid #616161;
 }
+/* FOOTER*/
 .footer {
   color: #ffffff;
 }
@@ -288,7 +319,6 @@ hr {
 }
 .contact {
   margin-top: 45px;
-  height: 330px;
   border-bottom: 4px double #3e3e3e;
 }
 .contact h6 {
@@ -319,6 +349,7 @@ hr {
 .social-list li {
   padding-bottom: 15px;
 }
+/* INTRO */
 .intro {
   line-height: 71px;
   margin-top: 110px;
@@ -336,21 +367,102 @@ hr {
   height: 34px;
   display: inline-block;
 }
-.page {
+/*PARTNER LIST*/
+.partner-list {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #cccccc;
+}
+.partner-list .span2:hover {
+  background: #ffffff;
+}
+.partner-list img {
+  margin: auto;
+  display: block;
+}
+.partner-list .stategic-title {
+  font-size: 1.125em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.partner-list p {
+  width: 95%;
+}
+/*MODULES*/
+.page,
+.li-page {
   text-align: center;
-  color: #333333;
-  background: #e8e8e8;
 }
-.page h1 {
-  display: inline-block;
-  margin: 53px;
-  color: #805e9c;
-  font-size: 2.8125em;
-}
-.page p {
+.page p,
+.li-page p {
   font-size: 1.125em;
   margin: 0px;
-  padding: 1em;
+  padding: 0.125em;
+}
+.page h1,
+.li-page h1 {
+  display: inline-block;
+  margin-top: 53px;
+  font-size: 2.8125em;
+}
+.heading {
+  height: 85px;
+  margin-bottom: 53px;
+  border-bottom: 1px solid #cccccc;
+}
+.heading h1 {
+  padding: 0 10px 0 10px;
+}
+.li-page {
+  color: #333333;
+}
+.li-page h1 {
+  color: #805e9c;
+}
+.title {
+  color: #ffffff;
+  font-size: 2.8125em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 10%;
+  margin-left: -30%;
+  margin-top: -5%;
+  text-shadow: 2px 2px 2px #616161;
+}
+/*BACKGROUND */
+.welcome-background {
+  width: 100%;
+  height: 410px;
+  background: url('../images/welcome-background.jpg') no-repeat -20px -255px;
+}
+.welcome-face {
+  height: 410px;
+  width: 100%;
+  margin-top: -410px;
+  background: url('../images/welcome-face.png') no-repeat 0% -70px;
+}
+.face21 {
+  height: 410px;
+  width: 100%;
+  margin-top: -410px;
+  background: url('../images/face21.png') no-repeat 140% -232px;
+}
+.jagtop-line {
+  background: url('../images/mgrey-jag-top.png');
+  height: 5px;
+  margin-top: -5px;
+  width: 100%;
+}
+/*BUTTONS*/
+.work-with-us-btn {
+  background: #323232;
+  border: none;
+  color: #ffffff;
+  font-size: 1.25em;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
 }
 .ico,
 .icoFB,
