@@ -225,6 +225,12 @@ table {
 .span3:after {
   clear: both;
 }
+@media all and (max-width: 960px) {
+  .span3 {
+    width: 100%;
+    float: none;
+  }
+}
 .span2 {
   width: 50%;
   float: left;
@@ -236,6 +242,12 @@ table {
 }
 .span2:after {
   clear: both;
+}
+@media all and (max-width: 768px) {
+  .span2 {
+    width: 100%;
+    float: none;
+  }
 }
 .bold {
   font-weight: bold;
@@ -265,8 +277,18 @@ hr {
   width: 100%;
 }
 .container {
-  width: 940px;
+  max-width: 960px;
   margin: auto;
+}
+@media all and (max-width: 960px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media all and (max-width: 768px) {
+  .container {
+    max-width: 550px;
+  }
 }
 /* HEADER */
 .header {
@@ -286,11 +308,18 @@ hr {
   height: 50px;
   padding-bottom: 5px;
 }
+@media all and (max-width: 960px) {
+  .logo {
+    display: block;
+    margin: auto;
+  }
+}
 /*NAVIGATION */
 .nav-bar {
   margin-left: 38px;
   display: inline-block;
   height: 45px;
+  text-align: center;
 }
 .nav-bar a {
   margin-right: 30px;
@@ -325,7 +354,12 @@ hr {
 .footer p {
   font-size: 0.6875em;
   margin: 6px;
-  width: 150px;
+}
+@media all and (max-width: 960px) {
+  .footer p,
+  .footer h6 {
+    font-size: 1em;
+  }
 }
 .contact {
   margin-top: 45px;
@@ -371,6 +405,11 @@ hr {
   padding-right: 19px;
   margin-top: -14px;
 }
+@media all and (max-width: 960px) {
+  .intro {
+    margin-top: 125px;
+  }
+}
 .singtel-logo {
   background: url('../images/logo-singtel.png') no-repeat;
   width: 104px;
@@ -392,7 +431,7 @@ hr {
   margin-bottom: 30px;
 }
 .partner-list p {
-  width: 95%;
+  max-width: 95%;
   padding-left: 1em;
   padding-right: 1em;
 }
@@ -423,9 +462,14 @@ hr {
   margin-top: 53px;
   font-size: 2.8125em;
 }
+.page .span2,
+.li-page .span2,
+.dk-page .span2 {
+  padding-top: 0.5em;
+}
 .heading {
   height: 85px;
-  margin-bottom: 53px;
+  margin-bottom: 5.7142em;
   border-bottom: 1px solid #cccccc;
 }
 .heading h1 {
@@ -451,6 +495,12 @@ hr {
   margin-left: -30%;
   margin-top: -5%;
   text-shadow: 2px 2px 2px #616161;
+}
+@media all and (max-width: 960px) {
+  .title {
+    margin-top: -10%;
+    font-size: 2.5em;
+  }
 }
 /*BACKGROUND */
 .welcome-background {
@@ -507,7 +557,7 @@ hr {
   background: url('../images/face41.png') no-repeat 140% -143px;
 }
 .face41:after {
-  background: url('../images/grey-top-jag1.png') repeat-x;
+  background: url('../images/mgrey-jag-top.png') repeat-x;
   width: 100%;
   height: 5px;
   margin-top: -5px;
@@ -535,9 +585,16 @@ hr {
 }
 .foundary {
   background: url('../images/1-1317-foundary-1-homepage.png') no-repeat;
-  width: 800px;
-  height: 500px;
+  max-width: 83.3333%;
+  height: 400px;
   margin: auto;
+  background-size: 83.3333%;
+  background-position: center;
+}
+@media all and (max-width: 768px) {
+  .foundary {
+    height: 300px;
+  }
 }
 /*BUTTONS*/
 .work-with-us-btn {
@@ -545,11 +602,11 @@ hr {
   border: none;
   color: #ffffff;
   font-size: 1.25em;
-  padding: 10px 20px;
+  padding: 0.625em 1.25em;
   text-decoration: none;
   display: inline-block;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.875em;
+  margin-bottom: 1.875em;
 }
 .work-with-us-btn:hover {
   background: #242424;
@@ -586,5 +643,10 @@ hr {
 }
 .icoLinked:hover {
   background: url('../images/LinkedIn-Icon-hover.png') no-repeat;
+}
+@media all and (max-width: 960px) {
+  body {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=/styles/main.css.map */
