@@ -18,7 +18,7 @@ hr{
 	margin: auto;
 }
 
-// HEADER 
+/* HEADER */
 .header{
 	padding-top: 25px;
 }
@@ -39,7 +39,7 @@ hr{
 	padding-bottom: 5px;
 }
 
-// NAVIGATION 
+/*NAVIGATION */
 
 .nav-theme(@color){
 	&:hover{
@@ -80,7 +80,7 @@ hr{
 }
 
 
-// FOOTER
+/* FOOTER*/
 .footer{
 	color:@white;
 	p{
@@ -92,7 +92,6 @@ hr{
 
 .contact{
 	margin-top: 45px;
-	height: 330px;
 	border-bottom: 4px double @line-gray;
 	h6{
 		margin-top: 0px;
@@ -127,7 +126,7 @@ hr{
 		padding-bottom: 15px;
 	}
 }
-// INTRO
+/* INTRO */
 .intro{
 	line-height: 71px;
 	margin-top: 110px;
@@ -147,22 +146,231 @@ hr{
 	display: inline-block;
 }
 
+/*PARTNER LIST*/
+.partner-list{
+	margin-bottom: 30px;
+	border-bottom:1px solid @li-gray;
 
-//MODULES
-.page{
-	text-align: center;
-	color:@gray;
-	background:@li-purple;
-	h1{
-		display: inline-block;
-		margin:53px;
-		color:@purple;
-		font-size: 2.8125em;
+	img{
+		margin: auto;
+		display: block;
 	}
-	p{
+
+	.stategic-title{
 		font-size: 1.125em;
-		margin: 0px;
-		padding: 1em;
+		font-weight: 600;
+		margin-bottom:30px;
+	}
+
+	p{
+		width:95%;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 }
 
+.li-hover{
+	&:hover{
+		background: @white;
+	}
+}
+
+.dk-hover{
+	&:hover{
+		background: @hover-black;
+	}
+}
+
+/*MODULES*/
+.page{
+	text-align: center;
+	p{
+		font-size: 1.125em;
+		margin: 0px;
+		padding-bottom: 0.125em;
+		padding-top: 0.125em;
+	}
+
+	h1{
+		display: inline-block;
+		margin-top:53px;
+		font-size: 2.8125em;
+	}
+}
+
+.heading{
+	height:85px;
+	margin-bottom: 53px;
+	border-bottom: 1px solid @li-gray;
+	h1{
+		padding:0 10px 0 10px;
+	}
+}
+
+.li-page{
+	&:extend(.page);
+	&:extend(.bg-li-purple);
+	color:@gray;
+
+	p{
+		&:extend(.page p);
+	}
+
+	h1{
+		&:extend(.page h1);
+		&:extend(.bg-li-purple);
+	}
+}
+
+.dk-page{
+	&:extend(.page);
+	color:@text-black;
+
+	p{
+		&:extend(.page p);
+	}
+
+	h1{
+		&:extend(.page h1);
+		&:extend(.bg-black);
+		color:@green;
+	}
+}
+
+.title{
+	color:@white;
+	font-size:2.8125em;
+	position: absolute;
+	top:50%;
+	left:50%;
+	width:60%;
+	height: 10%;
+	margin-left: -30%;
+	margin-top: -5%;
+	text-shadow: 2px 2px 2px @grey;
+}
+
+/*BACKGROUND */
+.welcome-background{
+	width:100%;
+	height:410px;
+	background : url('../images/welcome-background.jpg') no-repeat -20px -255px;
+}
+
+.welcome-face{
+	height: 410px;
+	width:100%;
+	margin-top: -410px;
+	background: url('../images/welcome-face.png') no-repeat 0% -70px;
+	&:after{
+		&:extend(.jagbottom-line);
+	}
+}
+
+.face21{
+	height: 410px;
+	width:100%;
+	margin-top: -410px;
+	background: url('../images/face21.png') no-repeat 140% -232px; 
+
+	&:before{
+		&:extend(.jagtop-line);
+	}
+
+	&:after{
+		background: url('../images/grey-top-jag1.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -5px;
+		display: block;
+		content: "";
+	}
+}
+
+.face31{
+	height: 410px;
+	width:100%;
+	margin-top: -410px;
+	background: url('../images/face31.png') no-repeat 0% -80px; 
+
+	&:before{
+		background: url('../images/grey-bottom-jag1.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -5px;
+		display: block;
+		content: "";
+	}
+
+	&:after{
+		background: url('../images/mgrey-jag-top.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -10px;
+		display: block;
+		content: "";
+	}
+}
+
+.face41{
+	height: 410px;
+	width:100%;
+	margin-top: -410px;
+	background: url('../images/face41.png') no-repeat 140% -143px; 
+
+	&:before{
+		&:extend(.jagtop-line);
+	}
+
+	&:after{
+		background: url('../images/grey-top-jag1.png') repeat-x;
+		width:100%;
+		height: 5px;
+		margin-top: -5px;
+		display: block;
+		content: "";
+	}
+}
+
+.jagbottom-line{
+	background: url('../images/mgrey-jag-top.png') repeat-x;
+	width:100%;
+	height: 5px;
+	margin-top: -5px;
+	display: block;
+	content: "";
+}
+
+.jagtop-line{
+	background: url('../images/mgrey-jag-bot.png') repeat-x;
+	width:100%;
+	height: 5px;
+	margin-bottom: -5px;
+	display: block;
+	content: "";
+}
+
+.foundary{
+	background: url('../images/1-1317-foundary-1-homepage.png') no-repeat;
+	width:800px;
+	height: 500px;
+	margin: auto;
+}
+
+
+/*BUTTONS*/
+.work-with-us-btn{
+	background: @button-black;
+	border: none;
+	color:@white;
+	font-size: 1.25em;
+	padding: 10px 20px;
+	text-decoration: none;
+	display: inline-block;
+	
+	margin-top: 30px;
+	margin-bottom: 30px;
+	&:hover{
+		background: @dark-black;
+	}
+}
