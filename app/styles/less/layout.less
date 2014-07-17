@@ -14,8 +14,16 @@ hr{
 
 
 .container {
-	width:940px;
+	max-width:960px;
 	margin: auto;
+
+	@media all and (max-width:960px){
+		max-width:768px;
+	}
+
+	@media all and (max-width:768px){
+		max-width:550px;
+	}
 }
 
 /* HEADER */
@@ -37,6 +45,10 @@ hr{
 	width:170px;
 	height:50px;
 	padding-bottom: 5px;
+	@media all and (max-width:960px){
+		display: block;
+		margin: auto;
+	}
 }
 
 /*NAVIGATION */
@@ -51,6 +63,7 @@ hr{
 	margin-left: 38px;
 	display: inline-block;
 	height: 45px;
+	text-align: center;
 	a{
 		margin-right: 30px;
 		padding-bottom: 20px;
@@ -86,7 +99,12 @@ hr{
 	p{
 		font-size: 0.6875em;
 		margin:6px;
-		width:150px;
+	}
+
+	@media all and (max-width:960px){
+		p,h6{
+			font-size: 1em;
+		}
 	}
 }
 
@@ -95,8 +113,7 @@ hr{
 	border-bottom: 4px double @line-gray;
 	h6{
 		margin-top: 0px;
-	}
-	
+	}	
 }
 
 .flag{
@@ -137,6 +154,10 @@ hr{
 		padding-right: 19px;
 		margin-top: -14px;
 	}
+
+	@media all and (max-width:960px){
+		margin-top: 125px;
+	}
 }
 
 .singtel-logo{
@@ -163,7 +184,7 @@ hr{
 	}
 
 	p{
-		width:95%;
+		max-width:95%;
 		padding-left: 1em;
 		padding-right: 1em;
 	}
@@ -196,11 +217,15 @@ hr{
 		margin-top:53px;
 		font-size: 2.8125em;
 	}
+
+	.span2{
+		padding-top: 0.5em;
+	}
 }
 
 .heading{
 	height:85px;
-	margin-bottom: 53px;
+	margin-bottom: 5.7142em;
 	border-bottom: 1px solid @li-gray;
 	h1{
 		padding:0 10px 0 10px;
@@ -220,6 +245,10 @@ hr{
 		&:extend(.page h1);
 		&:extend(.bg-li-purple);
 	}
+
+	.span2{
+		&:extend(.page .span2);
+	}
 }
 
 .dk-page{
@@ -235,6 +264,10 @@ hr{
 		&:extend(.bg-black);
 		color:@green;
 	}
+
+	.span2{
+		&:extend(.page .span2);
+	}
 }
 
 .title{
@@ -248,6 +281,11 @@ hr{
 	margin-left: -30%;
 	margin-top: -5%;
 	text-shadow: 2px 2px 2px @grey;
+
+	@media all and (max-width:960px){
+		margin-top: -10%;
+		font-size: 2.5em;
+	}
 }
 
 /*BACKGROUND */
@@ -323,7 +361,7 @@ hr{
 	}
 
 	&:after{
-		background: url('../images/grey-top-jag1.png') repeat-x;
+		background: url('../images/mgrey-jag-top.png') repeat-x;
 		width:100%;
 		height: 5px;
 		margin-top: -5px;
@@ -352,9 +390,15 @@ hr{
 
 .foundary{
 	background: url('../images/1-1317-foundary-1-homepage.png') no-repeat;
-	width:800px;
-	height: 500px;
+	max-width:83.3333%;
+	height: 400px;
 	margin: auto;
+	background-size:83.3333%;
+	background-position: center;
+
+	@media all and (max-width:768px){
+		height: 300px;
+	}
 }
 
 
@@ -364,12 +408,12 @@ hr{
 	border: none;
 	color:@white;
 	font-size: 1.25em;
-	padding: 10px 20px;
+	padding: 0.625em 1.25em;
 	text-decoration: none;
 	display: inline-block;
 	
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 1.875em;
+	margin-bottom: 1.875em;
 	&:hover{
 		background: @dark-black;
 	}
