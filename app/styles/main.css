@@ -331,21 +331,70 @@ hr {
   color: #805e9c;
   border-bottom: 5px solid #805e9c;
 }
+@media all and (max-width: 768px) {
+  .nav-bar .purple:hover {
+    color: #cccccc;
+    border: none;
+    background: #805e9c;
+  }
+}
 .nav-bar .green:hover {
   color: #88a73c;
   border-bottom: 5px solid #88a73c;
+}
+@media all and (max-width: 768px) {
+  .nav-bar .green:hover {
+    color: #cccccc;
+    border: none;
+    background: #88a73c;
+  }
 }
 .nav-bar .red:hover {
   color: #c72d29;
   border-bottom: 5px solid #c72d29;
 }
+@media all and (max-width: 768px) {
+  .nav-bar .red:hover {
+    color: #cccccc;
+    border: none;
+    background: #c72d29;
+  }
+}
 .nav-bar .blue:hover {
   color: #55b6ce;
   border-bottom: 5px solid #55b6ce;
 }
+@media all and (max-width: 768px) {
+  .nav-bar .blue:hover {
+    color: #cccccc;
+    border: none;
+    background: #55b6ce;
+  }
+}
 .nav-bar .grey:hover {
   color: #616161;
   border-bottom: 5px solid #616161;
+}
+@media all and (max-width: 768px) {
+  .nav-bar .grey:hover {
+    color: #cccccc;
+    border: none;
+    background: #616161;
+  }
+}
+@media all and (max-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    margin-left: 0px;
+    text-align: left;
+  }
+  .nav-bar a {
+    display: block;
+    width: 100%;
+    padding-left: 20px;
+    line-height: 2em;
+    padding-bottom: 0px;
+  }
 }
 /* FOOTER*/
 .footer {
@@ -393,6 +442,18 @@ hr {
 .social-list li {
   padding-bottom: 15px;
 }
+@media all and (max-width: 768px) {
+  .social-list {
+    bottom: 10px;
+    left: 50%;
+    margin-left: -110px;
+    top: inherit;
+  }
+  .social-list li {
+    padding-left: 15px;
+    display: inline;
+  }
+}
 /* INTRO */
 .intro {
   line-height: 71px;
@@ -408,6 +469,11 @@ hr {
 @media all and (max-width: 960px) {
   .intro {
     margin-top: 125px;
+  }
+}
+@media all and (max-width: 768px) {
+  .intro {
+    margin-top: 220px;
   }
 }
 .singtel-logo {
@@ -500,6 +566,11 @@ hr {
   .title {
     margin-top: -10%;
     font-size: 2.5em;
+  }
+}
+@media all and (max-width: 768px) {
+  .title {
+    font-size: 2em;
   }
 }
 /*BACKGROUND */

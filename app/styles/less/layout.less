@@ -58,6 +58,14 @@ hr{
 		color:@color;
 		border-bottom: 5px solid @color;
 	}
+
+	@media all and (max-width:768px){
+		&:hover{
+			color:@li-gray;
+			border:none;
+			background: @color;
+		}
+	}
 }
 .nav-bar{
 	margin-left: 38px;
@@ -89,6 +97,19 @@ hr{
 
 	.grey{
 		.nav-theme(@grey);
+	}
+
+	@media all and (max-width:768px){
+		width:100%;
+		margin-left: 0px;
+		text-align: left;
+		a{
+			display: block;
+			width: 100%;
+			padding-left: 20px;
+			line-height: 2em;
+			padding-bottom: 0px;
+		}
 	}
 }
 
@@ -142,6 +163,17 @@ hr{
 	li{
 		padding-bottom: 15px;
 	}
+
+	@media all and (max-width:768px){
+		bottom: 10px;
+		left:50%;
+		margin-left: -(160 + 60)/2px;
+		top:inherit;
+		li{
+			padding-left: 15px;
+			display: inline;
+		}
+	}
 }
 /* INTRO */
 .intro{
@@ -157,6 +189,10 @@ hr{
 
 	@media all and (max-width:960px){
 		margin-top: 125px;
+	}
+
+	@media all and (max-width:768px){
+		margin-top: 220px;
 	}
 }
 
@@ -285,6 +321,10 @@ hr{
 	@media all and (max-width:960px){
 		margin-top: -10%;
 		font-size: 2.5em;
+	}
+
+	@media all and (max-width:768px){
+		font-size: 2em;
 	}
 }
 
