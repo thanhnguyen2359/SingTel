@@ -3,6 +3,14 @@
 	width:39px;
 	height: 39px;
 	display: inline-block;
+	background-position: center;
+	@media all and (max-width:768px){
+		width: 44px;
+		height: 44px;
+		background-size:44px !important; 
+		-webkit-background-size:44px !important;
+		-moz-background-size:44px !important;
+	}
 }
 
 .icoFB{
@@ -17,7 +25,7 @@
 	&:extend(.ico);
 	background:url('../images/Twiter-Icon.png') no-repeat;
 	&:hover{
-		background:url('../images/Twiter-Icon.png') no-repeat;
+		background:url('../images/Twiter-Icon-hover.png') no-repeat;
 	}
 }
 

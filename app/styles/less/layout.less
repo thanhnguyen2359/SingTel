@@ -37,6 +37,9 @@ hr{
 	top:0px;
 	z-index: 1000;
 	background:@black;
+	@media all and (max-width:768px){
+		height: 280px;
+	}
 }
 
 .logo{
@@ -100,6 +103,39 @@ hr{
 	}
 
 	@media all and (max-width:768px){
+		display: none;
+	}
+	
+}
+
+.nav-bar-toggle{
+	&:extend(.nav-bar);
+	display: none;
+
+	a{
+		&:extend(.nav-bar a);
+	}
+	.purple{
+		.nav-theme(@purple);
+	}
+
+	.green{
+		.nav-theme(@green);
+	}
+
+	.red{
+		.nav-theme(@red);
+	}
+
+	.blue{
+		.nav-theme(@blue);
+	}
+
+	.grey{
+		.nav-theme(@grey);
+	}
+	@media all and (max-width:768px){
+		display: block;
 		width:100%;
 		margin-left: 0px;
 		text-align: left;
@@ -112,7 +148,6 @@ hr{
 		}
 	}
 }
-
 
 /* FOOTER*/
 .footer{
@@ -165,7 +200,7 @@ hr{
 	}
 
 	@media all and (max-width:768px){
-		bottom: 10px;
+		bottom: 0px;
 		left:50%;
 		margin-left: -(160 + 60)/2px;
 		top:inherit;
@@ -324,7 +359,7 @@ hr{
 	}
 
 	@media all and (max-width:768px){
-		font-size: 2em;
+		font-size: 1.75em;
 	}
 }
 

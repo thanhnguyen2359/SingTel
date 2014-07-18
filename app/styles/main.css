@@ -301,6 +301,11 @@ hr {
   z-index: 1000;
   background: #1a1e21;
 }
+@media all and (max-width: 768px) {
+  .banner {
+    height: 280px;
+  }
+}
 .logo {
   background: url('../images/28-logo-lifelab.png') no-repeat;
   display: inline-block;
@@ -315,13 +320,15 @@ hr {
   }
 }
 /*NAVIGATION */
-.nav-bar {
+.nav-bar,
+.nav-bar-toggle {
   margin-left: 38px;
   display: inline-block;
   height: 45px;
   text-align: center;
 }
-.nav-bar a {
+.nav-bar a,
+.nav-bar-toggle a {
   margin-right: 30px;
   padding-bottom: 20px;
   color: #cccccc;
@@ -383,12 +390,77 @@ hr {
   }
 }
 @media all and (max-width: 768px) {
-  .nav-bar {
+  .nav-bar,
+  .nav-bar-toggle {
+    display: none;
+  }
+}
+.nav-bar-toggle {
+  display: none;
+}
+.nav-bar-toggle .purple:hover {
+  color: #805e9c;
+  border-bottom: 5px solid #805e9c;
+}
+@media all and (max-width: 768px) {
+  .nav-bar-toggle .purple:hover {
+    color: #cccccc;
+    border: none;
+    background: #805e9c;
+  }
+}
+.nav-bar-toggle .green:hover {
+  color: #88a73c;
+  border-bottom: 5px solid #88a73c;
+}
+@media all and (max-width: 768px) {
+  .nav-bar-toggle .green:hover {
+    color: #cccccc;
+    border: none;
+    background: #88a73c;
+  }
+}
+.nav-bar-toggle .red:hover {
+  color: #c72d29;
+  border-bottom: 5px solid #c72d29;
+}
+@media all and (max-width: 768px) {
+  .nav-bar-toggle .red:hover {
+    color: #cccccc;
+    border: none;
+    background: #c72d29;
+  }
+}
+.nav-bar-toggle .blue:hover {
+  color: #55b6ce;
+  border-bottom: 5px solid #55b6ce;
+}
+@media all and (max-width: 768px) {
+  .nav-bar-toggle .blue:hover {
+    color: #cccccc;
+    border: none;
+    background: #55b6ce;
+  }
+}
+.nav-bar-toggle .grey:hover {
+  color: #616161;
+  border-bottom: 5px solid #616161;
+}
+@media all and (max-width: 768px) {
+  .nav-bar-toggle .grey:hover {
+    color: #cccccc;
+    border: none;
+    background: #616161;
+  }
+}
+@media all and (max-width: 768px) {
+  .nav-bar-toggle {
+    display: block;
     width: 100%;
     margin-left: 0px;
     text-align: left;
   }
-  .nav-bar a {
+  .nav-bar-toggle a {
     display: block;
     width: 100%;
     padding-left: 20px;
@@ -444,7 +516,7 @@ hr {
 }
 @media all and (max-width: 768px) {
   .social-list {
-    bottom: 10px;
+    bottom: 0px;
     left: 50%;
     margin-left: -110px;
     top: inherit;
@@ -570,7 +642,7 @@ hr {
 }
 @media all and (max-width: 768px) {
   .title {
-    font-size: 2em;
+    font-size: 1.75em;
   }
 }
 /*BACKGROUND */
@@ -690,6 +762,20 @@ hr {
   width: 39px;
   height: 39px;
   display: inline-block;
+  background-position: center;
+}
+@media all and (max-width: 768px) {
+  .ico,
+  .icoFB,
+  .icoTwitter,
+  .icoGP,
+  .icoLinked {
+    width: 44px;
+    height: 44px;
+    background-size: 44px !important;
+    -webkit-background-size: 44px !important;
+    -moz-background-size: 44px !important;
+  }
 }
 .icoFB {
   background: url('../images/FB-icon.png') no-repeat;
@@ -701,7 +787,7 @@ hr {
   background: url('../images/Twiter-Icon.png') no-repeat;
 }
 .icoTwitter:hover {
-  background: url('../images/Twiter-Icon.png') no-repeat;
+  background: url('../images/Twiter-Icon-hover.png') no-repeat;
 }
 .icoGP {
   background: url('../images/gplus-icon.png') no-repeat;
@@ -718,6 +804,11 @@ hr {
 @media all and (max-width: 960px) {
   body {
     font-size: 14px;
+  }
+  .face21,
+  .face31,
+  .face41 {
+    background-position: center;
   }
 }
 /*# sourceMappingURL=/styles/main.css.map */
