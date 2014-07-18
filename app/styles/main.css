@@ -294,6 +294,11 @@ hr {
 .header {
   padding-top: 25px;
 }
+@media all and (max-width: 768px) {
+  .header {
+    margin-bottom: 10px;
+  }
+}
 .banner {
   width: 100%;
   position: fixed;
@@ -450,7 +455,6 @@ hr {
 }
 @media all and (max-width: 768px) {
   .nav-bar-toggle {
-    display: block;
     width: 100%;
     margin-left: 0px;
     text-align: left;
@@ -546,8 +550,16 @@ hr {
 }
 @media all and (max-width: 768px) {
   .intro {
-    margin-top: 290px;
+    margin-top: 80px;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
   }
+}
+.intro-expand {
+  margin-top: 290px;
 }
 .singtel-logo {
   background: url('../images/logo-singtel.png') no-repeat;
@@ -755,6 +767,11 @@ hr {
 .work-with-us-btn:hover {
   background: #242424;
 }
+@media all and (max-width: 768px) {
+  .work-with-us-btn {
+    width: 90%;
+  }
+}
 .ico,
 .icoFB,
 .icoTwitter,
@@ -781,10 +798,10 @@ hr {
   }
 }
 .icoFB {
-  background: url('../images/FB-icon.png') no-repeat;
+  background: url('../images/fb-icon.png') no-repeat;
 }
 .icoFB:hover {
-  background: url('../images/FB-icon-hover.png') no-repeat;
+  background: url('../images/fb-icon-hover.png') no-repeat;
 }
 .icoTwitter {
   background: url('../images/Twiter-Icon.png') no-repeat;
@@ -818,6 +835,7 @@ hr {
 }
 .icoMenu:hover {
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 @media all and (max-width: 768px) {
   .icoMenu {

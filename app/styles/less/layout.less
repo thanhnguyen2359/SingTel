@@ -29,6 +29,10 @@ hr{
 /* HEADER */
 .header{
 	padding-top: 25px;
+
+	@media all and (max-width:768px){
+		margin-bottom: 10px;
+	}
 }
 
 .banner{
@@ -132,7 +136,7 @@ hr{
 		.nav-theme(@grey);
 	}
 	@media all and (max-width:768px){
-		display: block;
+		// display: block;
 		width:100%;
 		margin-left: 0px;
 		text-align: left;
@@ -235,8 +239,17 @@ hr{
 	}
 
 	@media all and (max-width:768px){
-		margin-top: 290px;
+		margin-top: 80px;
+		-webkit-transform: translatez(0);
+	    -moz-transform: translatez(0);
+	    -ms-transform: translatez(0);
+	    -o-transform: translatez(0);
+	    transform: translatez(0);
 	}
+}
+
+.intro-expand {
+	margin-top: 290px;
 }
 
 .singtel-logo{
@@ -499,5 +512,9 @@ hr{
 	margin-bottom: 1.875em;
 	&:hover{
 		background: @dark-black;
+	}
+
+	@media all and (max-width:768px){
+		width: 90%;
 	}
 }
