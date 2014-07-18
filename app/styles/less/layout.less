@@ -149,6 +149,16 @@ hr{
 	}
 }
 
+.nav-bar-btn{
+	@media all and (max-width:768px){
+		&:focus{
+			~.nav-bar-toggle{
+				display: block;
+			}
+		}
+	}
+}
+
 /* FOOTER*/
 .footer{
 	color:@white;

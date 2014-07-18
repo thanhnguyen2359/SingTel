@@ -44,3 +44,24 @@
 		background:url('../images/LinkedIn-Icon-hover.png') no-repeat;
 	}
 }
+
+.icoMenu{
+	&:extend(.ico);
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px; 	
+	position: fixed;
+	right:20px;
+	top:35px;
+	z-index: 1001;
+	background: url('../images/menu-toggle.png') no-repeat;
+	background-color: @white;
+	display: none;
+	&:hover{
+		border:1px solid @white;
+	}
+
+	@media all and (max-width:768px){
+		display: block;
+	}
+}

@@ -468,6 +468,11 @@ hr {
     padding-bottom: 0px;
   }
 }
+@media all and (max-width: 768px) {
+  .nav-bar-btn:focus ~ .nav-bar-toggle {
+    display: block;
+  }
+}
 /* FOOTER*/
 .footer {
   color: #ffffff;
@@ -758,7 +763,8 @@ hr {
 .icoFB,
 .icoTwitter,
 .icoGP,
-.icoLinked {
+.icoLinked,
+.icoMenu {
   width: 39px;
   height: 39px;
   display: inline-block;
@@ -769,7 +775,8 @@ hr {
   .icoFB,
   .icoTwitter,
   .icoGP,
-  .icoLinked {
+  .icoLinked,
+  .icoMenu {
     width: 44px;
     height: 44px;
     background-size: 44px !important;
@@ -800,6 +807,26 @@ hr {
 }
 .icoLinked:hover {
   background: url('../images/LinkedIn-Icon-hover.png') no-repeat;
+}
+.icoMenu {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  position: fixed;
+  right: 20px;
+  top: 35px;
+  z-index: 1001;
+  background: url('../images/menu-toggle.png') no-repeat;
+  background-color: #ffffff;
+  display: none;
+}
+.icoMenu:hover {
+  border: 1px solid #ffffff;
+}
+@media all and (max-width: 768px) {
+  .icoMenu {
+    display: block;
+  }
 }
 @media all and (max-width: 960px) {
   body {
