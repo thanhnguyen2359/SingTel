@@ -301,11 +301,6 @@ hr {
   z-index: 1000;
   background: #1a1e21;
 }
-@media all and (max-width: 768px) {
-  .banner {
-    height: 280px;
-  }
-}
 .logo {
   background: url('../images/28-logo-lifelab.png') no-repeat;
   display: inline-block;
@@ -459,6 +454,7 @@ hr {
     width: 100%;
     margin-left: 0px;
     text-align: left;
+    height: auto;
   }
   .nav-bar-toggle a {
     display: block;
