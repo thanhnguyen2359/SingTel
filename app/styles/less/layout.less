@@ -365,13 +365,16 @@ hr{
 .title{
 	color:@white;
 	font-size:2.8125em;
-	position: absolute;
-	top:50%;
-	left:50%;
-	width:60%;
-	height: 10%;
-	margin-left: -30%;
-	margin-top: -5%;
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 20%;
+	padding-right: 20%;
+	// position: absolute;
+	// top:50%;
+	// left:50%;
+	// width:60%;
+	// margin-left: -30%;
+	// margin-top: -5%;
 	text-shadow: 2px 2px 2px @grey;
 
 	@media all and (max-width:960px){
@@ -393,7 +396,12 @@ hr{
 
 .welcome-face{
 	height: 410px;
-	tranform:translatez(0);
+	display: table;
+	transform:translatez(0);
+	-webkit-transform:translatez(0);
+	-moz-transform:translatez(0);
+	-ms-transform:traslatez(0);
+
 	width:100%;
 	margin-top: -410px;
 	background: url('../images/welcome-face.png') no-repeat 0% -70px;
@@ -406,7 +414,13 @@ hr{
 	height: 410px;
 	width:100%;
 	margin-top: -410px;
-	tranform:translatez(0);
+	display: table;
+
+	transform:translatez(0);
+	-webkit-transform:translatez(0);
+	-moz-transform:translatez(0);
+	-ms-transform:traslatez(0);
+
 	background: url('../images/face21.png') no-repeat 140% -232px; 
 
 	&:before{
@@ -427,7 +441,11 @@ hr{
 	height: 410px;
 	width:100%;
 	margin-top: -410px;
-	tranform:translatez(0);
+	display: table;
+	transform:translatez(0);
+	-webkit-transform:translatez(0);
+	-moz-transform:translatez(0);
+	-ms-transform:traslatez(0);
 	background: url('../images/face31.png') no-repeat 0% -80px; 
 
 	&:before{
@@ -453,6 +471,11 @@ hr{
 	height: 410px;
 	width:100%;
 	margin-top: -410px;
+	display: table;
+	transform:translatez(0);
+	-webkit-transform:translatez(0);
+	-moz-transform:translatez(0);
+	-ms-transform:traslatez(0);
 	background: url('../images/face41.png') no-repeat 140% -143px; 
 	
 	&:before{
