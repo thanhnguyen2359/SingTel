@@ -666,6 +666,7 @@ hr {
 }
 .welcome-face {
   height: 410px;
+  tranform: translatez(0);
   width: 100%;
   margin-top: -410px;
   background: url('../images/welcome-face.png') no-repeat 0% -70px;
@@ -674,6 +675,7 @@ hr {
   height: 410px;
   width: 100%;
   margin-top: -410px;
+  tranform: translatez(0);
   background: url('../images/face21.png') no-repeat 140% -232px;
 }
 .face21:after {
@@ -688,6 +690,7 @@ hr {
   height: 410px;
   width: 100%;
   margin-top: -410px;
+  tranform: translatez(0);
   background: url('../images/face31.png') no-repeat 0% -80px;
 }
 .face31:before {
@@ -851,5 +854,29 @@ hr {
   .face41 {
     background-position: center;
   }
+}
+.carousel {
+  position: relative;
+}
+.carousel-prev {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  cursor: pointer;
+  background: url("../images/gallery-left-gray-arrow.png");
+  width: 60px;
+  height: 60px;
+}
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  cursor: pointer;
+  background: url("../images/gallery-right-gray-arrow.png");
+  width: 60px;
+  height: 60px;
+}
+.carousel-hide {
+  display: none;
 }
 /*# sourceMappingURL=/styles/main.css.map */
