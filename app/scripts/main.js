@@ -42,21 +42,24 @@
 
 			prevBtn.off("click").on("click",function(){		
 				$(items).hide();
+				
 				var showedItems = getShowItems(items.length,step,i,false);
-
-				showedItems.forEach(function(index){
-					$(items[index]).show();
-				});
-				i = (i = i - step) >= 0 ? i : items.length - step; 		
+					showedItems.forEach(function(index){
+						$(items[index]).show();
+					});
+				i = (i = i - step) >= 0 ? i : items.length - step; 	
+					
 			});
 
 			nextBtn.off("click").on("click",function(){
 				$(items).hide();
+				
 				var showedItems = getShowItems(items.length,step,i,true);
-				showedItems.forEach(function(index){
-					$(items[index]).show();
-				});
-				i = (i = i + step) < items.length ? i : 0; 			
+					showedItems.forEach(function(index){
+						$(items[index]).show();
+					});
+				i = (i = i + step) < items.length ? i : 0; 	
+					
 			});
 		});
 	}
