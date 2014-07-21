@@ -36,26 +36,27 @@
 				step = 2;
 
 			while(--i >= step){
-				$(items[i]).addClass("carousel-hide");
+				$(items[i]).hide();
 			}
 			i = 0;
 
-			prevBtn.off("click").on("click",function(){
-				$(items).addClass("carousel-hide");
+			prevBtn.off("click").on("click",function(){		
+				$(items).hide();
 				var showedItems = getShowItems(items.length,step,i,false);
+
 				showedItems.forEach(function(index){
-					$(items[index]).removeClass("carousel-hide");
+					$(items[index]).show();
 				});
-				i = (i = i - step) >= 0 ? i : items.length - step; 
+				i = (i = i - step) >= 0 ? i : items.length - step; 		
 			});
 
 			nextBtn.off("click").on("click",function(){
-				$(items).addClass("carousel-hide");
+				$(items).hide();
 				var showedItems = getShowItems(items.length,step,i,true);
 				showedItems.forEach(function(index){
-					$(items[index]).removeClass("carousel-hide");
+					$(items[index]).show();
 				});
-				i = (i = i + step) < items.length ? i : 0; 
+				i = (i = i + step) < items.length ? i : 0; 			
 			});
 		});
 	}

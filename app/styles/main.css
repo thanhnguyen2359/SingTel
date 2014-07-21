@@ -857,6 +857,7 @@ hr {
 }
 .carousel {
   position: relative;
+  transform: translatez(0);
 }
 .carousel-prev {
   position: absolute;
@@ -875,8 +876,5 @@ hr {
   background: url("../images/gallery-right-gray-arrow.png");
   width: 60px;
   height: 60px;
-}
-.carousel-hide {
-  display: none;
 }
 /*# sourceMappingURL=/styles/main.css.map */
