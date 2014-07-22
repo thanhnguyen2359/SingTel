@@ -1,7 +1,6 @@
 
 .carousel{
 	position: relative;
-	
 	overflow: hidden;
 }
 
@@ -10,12 +9,16 @@
 	transform:translatez(0);
 }
 .carousel-item{
+	padding-bottom: 1em; /// BAD IDEA ! 
 	float:left;
 	max-width: @large-screen-width/2;
 	z-index: 1;
 
-	@media all and (max-width:768px){
+	@media all and (max-width:@large-screen-width){
 		max-width: @middle-screen-width;
+	}
+	@media all and (max-width:@middle-screen-width){
+		max-width:550px;
 	}
 }
 

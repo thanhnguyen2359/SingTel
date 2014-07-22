@@ -878,13 +878,19 @@ hr {
   transform: translatez(0);
 }
 .carousel-item {
+  padding-bottom: 1em;
   float: left;
   max-width: 480px;
   z-index: 1;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 960px) {
   .carousel-item {
     max-width: 768px;
+  }
+}
+@media all and (max-width: 768px) {
+  .carousel-item {
+    max-width: 550px;
   }
 }
 .carousel-prev {
