@@ -10,6 +10,8 @@
     <meta name="description" content="Singel">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -261,6 +263,17 @@
           </p>
         </div>
       </section>
+      <section class="page">
+        <video id="video-example" class="video-js vjs-default-skin full-parent"
+          controls preload="auto" width="640" height="264"
+          poster="http://video-js.zencoder.com/oceans-clip.png"
+          data-setup='{"example_option":true}'>
+         <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+         <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+         <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+      </section>
       <footer class='container footer'>
           <div class="contact">
             <div class="span3">
@@ -384,6 +397,7 @@
 
         <!-- build:js scripts/main.js -->
         <script src="bower_components/jquery/jquery.js"></script>
+        <script src="https://vjs.zencdn.net/4.6/video.js"></script>
         <script src="scripts/main.js"></script>
         <script src="scripts/hello.js"></script>
         <!-- endbuild -->
