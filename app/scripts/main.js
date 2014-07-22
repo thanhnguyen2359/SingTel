@@ -10,7 +10,7 @@
 		},
 		opts = $.extend({},defaults,options);
 
-		var calculateTotalWidth = function(items){
+		var _calculateTotalWidth = function(items){
 			var totalWidth =0,i = items.length;
 			while(--i >= 0){
 				totalWidth += $(items[i]).outerWidth();
@@ -23,42 +23,42 @@
 		});
 
 		return $(this).each(function(){
-			var elem = $(this),
-				nextBtn = $("." + opts.nextItemClass,elem),
-				prevBtn = $("." + opts.prevItemClass,elem),
-				wrap = $("." + opts.wrapperClass,elem),
-				items = $('.' + opts.itemsClass,elem),
+			var $elem = $(this),
+				$nextBtn = $("." + opts.nextItemClass,$elem),
+				$prevBtn = $("." + opts.prevItemClass,$elem),
+				$wrap = $("." + opts.wrapperClass,$elem),
+				$items = $('.' + opts.itemsClass,$elem),
 				totalWidth = 0,
-				unitWidth = $(items[0]).width(),
+				unitWidth = $($items[0]).width(),
 				index = 0;
 
 			
 			// Calculate total width of wrapper
-			totalWidth = calculateTotalWidth(items);
-			wrap.width(totalWidth);
+			totalWidth = _calculateTotalWidth($items);
+			$wrap.width(totalWidth);
 
-			elem.off('carousel-resize').on('carousel-resize',function(){
+			$elem.off('carousel-resize').on('carousel-resize',function(){
 				console.log('carousel-resize...');
 				//Recalculate total width of wrapper
-				unitWidth = $(items[0]).width();
-				totalWidth = calculateTotalWidth(items);
+				unitWidth = $($items[0]).width();
+				totalWidth = _calculateTotalWidth($items);
 				//wrap.width(totalWidth);
-				wrap.css({
+				$wrap.css({
 					width: totalWidth,
 					left :  -1* unitWidth * index
 				});
 			});
-			nextBtn.off('click').on('click',function(){
-				index = (++index < items.length) ? index : 0;
-				wrap.animate({
+			$nextBtn.off('click').on('click',function(){
+				index = (++index < $items.length) ? index : 0;
+				$wrap.animate({
 					left: -1* unitWidth * index
 				},800);
 
 			});
 
-			prevBtn.off('click').on('click',function(){
-				index = (--index >= 0) ? index : items.length - 1; 
-				wrap.animate({
+			$prevBtn.off('click').on('click',function(){
+				index = (--index >= 0) ? index : $items.length - 1; 
+				$wrap.animate({
 					left: -1* unitWidth * index
 				},800);
 			});
