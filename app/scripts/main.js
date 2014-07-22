@@ -3,64 +3,45 @@
 ;(function($,undefined){
 	$.fn.carouselSlider = function(options){
 		var defaults = {
-			wrapperClass : 'carousel',
+			wrapperClass : 'carousel-inner',
 			itemsClass : 'carousel-item',
 			nextItemClass : 'carousel-next',
 			prevItemClass : 'carousel-prev'
 		},
 		opts = $.extend({},defaults,options);
 
-		var getShowItems = function(numberItems, step , index , goNext){
-			var hashPosition = [],
-				i = 0;
-			if(goNext){
-				index = (index = index - step) >= 0 ? index : numberItems - step;
-			}else{
-				index = (index = index + step) < numberItems ? index : 0;
-			}
-
-			while (i < step){
-				hashPosition.push(index);
-				index++;
-				i++;
-			}
-			return hashPosition;
-		};
-
 		return $(this).each(function(){
-			var elem = this,
-				items = $("." + opts.itemsClass ,elem),
-				prevBtn = $("." + opts.prevItemClass,elem),
+			var elem = $(this),
 				nextBtn = $("." + opts.nextItemClass,elem),
-				i = items.length,
-				step = 2;
+				prevBtn = $("." + opts.prevItemClass,elem),
+				wrap = $("." + opts.wrapperClass,elem),
+				items = $('.' + opts.itemsClass,elem),
+				totalWidth = 0,
+				unitWidth = $(items[0]).width()
+				,i = items.length,index = 0;
 
-			while(--i >= step){
-				$(items[i]).hide();
+			// Calculate total width of wrapper
+			while(--i >= 0){
+				totalWidth += $(items[i]).outerWidth() + 100;
 			}
-			i = 0;
+			wrap.width(totalWidth);
 
-			prevBtn.off("click").on("click",function(){		
-				$(items).hide();
-				
-				var showedItems = getShowItems(items.length,step,i,false);
-					showedItems.forEach(function(index){
-						$(items[index]).show();
-					});
-				i = (i = i - step) >= 0 ? i : items.length - step; 	
-					
+			// Events
+			nextBtn.off('click').on('click',function(){
+				index = (++index < items.length) ? index : 0;
+				wrap.animate({
+					left: -1* unitWidth * index
+				},500);
+
 			});
 
-			nextBtn.off("click").on("click",function(){
-				$(items).hide();
-				
-				var showedItems = getShowItems(items.length,step,i,true);
-					showedItems.forEach(function(index){
-						$(items[index]).show();
-					});
-				i = (i = i + step) < items.length ? i : 0; 	
-					
+			prevBtn.off('click').on('click',function(){
+				index = (--index >= 0) ? index : items.length - 1; 
+				wrap.animate({
+					left: -1* unitWidth * index
+				},500);
 			});
+
 		});
 	}
 })(window.jQuery);
