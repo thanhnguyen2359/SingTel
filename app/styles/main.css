@@ -871,24 +871,40 @@ hr {
 }
 .carousel {
   position: relative;
+  overflow: hidden;
+}
+.carousel-inner {
+  position: relative;
   transform: translatez(0);
+}
+.carousel-item {
+  float: left;
+  max-width: 480px;
+  z-index: 1;
+}
+@media all and (max-width: 768px) {
+  .carousel-item {
+    max-width: 768px;
+  }
 }
 .carousel-prev {
   position: absolute;
   top: 50%;
-  left: -40px;
+  left: 0px;
   cursor: pointer;
   background: url("../images/gallery-left-gray-arrow.png");
   width: 60px;
   height: 60px;
+  z-index: 2;
 }
 .carousel-next {
   position: absolute;
   top: 50%;
-  right: -40px;
+  right: 0px;
   cursor: pointer;
   background: url("../images/gallery-right-gray-arrow.png");
   width: 60px;
   height: 60px;
+  z-index: 2;
 }
 /*# sourceMappingURL=/styles/main.css.map */
