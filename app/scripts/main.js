@@ -42,7 +42,11 @@
 				//Recalculate total width of wrapper
 				unitWidth = $(items[0]).width();
 				totalWidth = calculateTotalWidth(items);
-				wrap.width(totalWidth);
+				//wrap.width(totalWidth);
+				wrap.css({
+					width: totalWidth,
+					left :  -1* unitWidth * index
+				});
 			});
 			nextBtn.off('click').on('click',function(){
 				index = (++index < items.length) ? index : 0;
